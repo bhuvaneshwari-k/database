@@ -2,13 +2,13 @@ package org.example;
 import java.sql.*;
 import java.util.*;
 
-public class database {
-    static database db;
+public class Database {
+    static Database db;
     Connection conn;
-    private  database(){}
-    public static database getdatabase(){
+    private  Database(){}
+    public static Database getdatabase(){
         if(db==null)
-            db=new database();
+            db=new Database();
         return db;
     }
     void newConnection(String url1,String user1,String pass1) throws SQLException{
@@ -27,7 +27,7 @@ public class database {
     String user=s.nextLine();
         System.out.println("Enter the password:");
     String pass=s.nextLine();
-    database d1=database.getdatabase();
+    Database d1=Database.getdatabase();
     d1.newConnection(url,user,pass);
     d1.closeConnection();
     }
