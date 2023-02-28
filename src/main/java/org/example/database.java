@@ -3,7 +3,7 @@ import java.sql.*;
 import java.util.*;
 import java.util.logging.Logger;
 public class Database {
-    static Logger l=Logger.getLogger("welcome");
+    static Logger l=Logger.getLogger("database.class");
     static Database db;
     Connection conn;
     private  Database(){}
@@ -22,7 +22,7 @@ public class Database {
     }
     public static void main(String[] args) throws SQLException {
         Scanner s=new Scanner(System.in);
-        static Logger l=Logger.getLogger("welcome");
+        static Logger l=Logger.getLogger("database.class");
         l.info("Enter the url:");
     String url=s.nextLine();
         l.info("Enter the username:");
